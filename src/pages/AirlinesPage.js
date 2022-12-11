@@ -8,7 +8,7 @@ function AirlinesPage(props) {
     const [airlines, setAirlines] = useState([]);
 
     useEffect(() => {
-        fetch("/airlines")
+        fetch("https://airline-reviews-production.up.railway.app/airlines")
         .then((res) => res.json())
         .then(setAirlines);
     }, []);

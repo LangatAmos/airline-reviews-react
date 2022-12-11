@@ -10,7 +10,7 @@ function App() {
   const [user, setUser] = useState(null);
   useEffect(() => {
     // auto-login
-    fetch("/me").then((r) => {
+    fetch("https://airline-reviews-production.up.railway.app/me").then((r) => {
       if (r.ok) {
         r.json().then((user) => setUser(user));
       }

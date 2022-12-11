@@ -18,7 +18,7 @@ function AirlineDetails(props){
 
 
     useEffect(() =>{
-        fetch(`/airlines/${id}`)
+        fetch(`https://airline-reviews-production.up.railway.app/airlines/${id}`)
         .then(response => response.json())
         .then((airline) => setAirline(airline))
         // .then((airline) => console.log(airline.reviews))
@@ -38,7 +38,7 @@ function AirlineDetails(props){
         const airline_id = airline.id
         const user_id = props.user.id
 
-        fetch("/reviews", {
+        fetch("https://airline-reviews-production.up.railway.app/reviews", {
             method: 'POST',  
             headers:{
                 'Content-Type': 'application/json'
@@ -56,7 +56,7 @@ function AirlineDetails(props){
         }
     function handleDelete(id){
         // console.log(id)
-        fetch(`/reviews/${id}`,{
+        fetch(`https://airline-reviews-production.up.railway.app/reviews/${id}`,{
             method: 'DELETE'
         })
         // .then(response => response.json())

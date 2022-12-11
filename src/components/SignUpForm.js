@@ -12,7 +12,7 @@ function SignUpForm({ onLogin }) {
         e.preventDefault();
         setErrors([]);
         setIsLoading(true);
-        fetch("/signup", {
+        fetch("https://airline-reviews-production.up.railway.app/signup", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
