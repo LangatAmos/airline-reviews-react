@@ -5,7 +5,8 @@ import { Button } from "../styles";
 
 function NavBar({ user, setUser }) {
     function handleLogoutClick() {
-        fetch("/logout", { method: "DELETE" }).then((r) => {
+        fetch("https://airline-reviews-production.up.railway.app/logout", 
+        { method: "DELETE" }).then((r) => {
         if (r.ok) {
             setUser(null);
         }

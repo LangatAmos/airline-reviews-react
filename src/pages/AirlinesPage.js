@@ -19,10 +19,10 @@ function AirlinesPage(props) {
         <Wrapper id="airlinespage">
             <h1 id="login-title">Honest, Unbiased airline reviews. Share your experience</h1>
         {airlines.length > 0 ? (
-            <ul className="cards">
+            <Airline className="cards">
             {airlines.map((airline) => {
 
-                const {id, name, image_url ,description} = airline
+                const {id, name, image_url } = airline
 
                 return <AirlineCard key={id} 
                 id={id}
@@ -30,7 +30,7 @@ function AirlinesPage(props) {
                 image_url={image_url}
                 />;
             })}
-            </ul>
+            </Airline>
             ) : (
             <>
             <h2>No airlines Found</h2>
